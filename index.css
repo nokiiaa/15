@@ -1,0 +1,66 @@
+html, body {
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.grid {
+    width: min(90vw, 60vh);
+    height: min(90vw, 60vh);
+    font-size: 0;
+    margin: max(50vh - 45vw, 20vh) auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: min(22.5vw, 15vh);
+    grid-template-rows: min(22.5vw, 15vh);
+    border-radius: 10px;
+}
+
+.square {
+    background-color: white;
+    box-shadow: 0 0 6px purple inset;
+    cursor: default;
+    z-index: 1;
+    border-radius: 10px;
+    transition: box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.square.highlight {
+    box-shadow: 0 0 9px green inset;
+    background-color: hsl(100, 100%, 95%);
+}
+
+.empty-square {
+    background-color: black;
+    cursor: default;
+    z-index: 1;
+}
+
+.square span {
+    position: absolute;
+    font-size: max(5vw, 10vh);
+    color: black;
+    text-shadow: 1px 1px 2px grey;
+    width: 100%;
+    margin: 10px 10px;
+    pointer-events: none;
+    user-select: none;
+    font-family: 'Tilt Neon', cursive;
+}
+
+.empty-square span {
+    position: absolute;
+    font-size: max(5vw, 10vh);
+    color: transparent;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+h1 {
+    font-family: Roboto;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px grey;
+}
